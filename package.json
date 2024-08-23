@@ -1,5 +1,5 @@
 {
-  "name": "url_shortner",
+  "name": "url_shortener",
   "version": "1.0.0",
   "description": "This repository provides a scalable backend service for URL shortening. It includes an API for creating, managing, and redirecting short URLs, with support for custom links and click-tracking analytics.",
   "main": "app.js",
@@ -26,7 +26,8 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "mongoose": "^8.5.3",
+    "mongoose": "^6.12.8",
+    "nanoid": "^3.3.7",
     "nodemon": "^3.1.4",
     "ua-parser-js": "^1.0.38"
   }

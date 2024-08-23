@@ -3,10 +3,11 @@ const {createServer} = require("http");
 const os = require("os");
 const path = require("path");
 const cluster = require('cluster');
-const port = process.env.PORT || 3200;
+const port = process.env.PORT || 6800;
 
 require('./config/global');
 require('./config/db');
+const mongoose = require("mongoose");
 
 if(cluster.isMaster) {
     console.log(`Master process ${process.pid} is running`);
@@ -37,6 +38,18 @@ if(cluster.isMaster) {
     app.set('views', path.join(__dirname, 'views'));
     app.engine('html', require('ejs').renderFile);
     app.use(express.static("public"));
+
+    const configDB = require('./config/db');
+    // Connection with mongodb and redis
+    mongoose.connection = mongoose.connect(configDB.mongodbUrl);
+
+    mongoose.connection.on('connected', () => {
+        console.log('Mongo connection established');
+    });
+
+    mongoose.connection.on('error', () => {
+        console.log('Mongo connection failed');
+    });
 
     require('./routes')(app);
     const httpServer = createServer(app);

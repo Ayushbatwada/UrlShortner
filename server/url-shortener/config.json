@@ -1,0 +1,12 @@
+{
+  "status": {
+    "active": "active",
+    "inactive": "inactive",
+    "expired": "expired",
+    "deleted": "deleted",
+    "values": ["active", "inactive", "expired", "deleted"]
+  },
+
+  "customAlphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+  "shortIdLength": 10
+}
