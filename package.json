@@ -1,0 +1,33 @@
+{
+  "name": "url_shortner",
+  "version": "1.0.0",
+  "description": "This repository provides a scalable backend service for URL shortening. It includes an API for creating, managing, and redirecting short URLs, with support for custom links and click-tracking analytics.",
+  "main": "app.js",
+  "scripts": {
+    "dev:start": "nodemon app.js",
+    "prod:start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayushbatwada/UrlShortner_BE.git"
+  },
+  "keywords": [
+    "Url_Shortner",
+    "Deep_link",
+    "Short_link"
+  ],
+  "author": "Ayush Kumar Batwara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ayushbatwada/UrlShortner_BE/issues"
+  },
+  "homepage": "https://github.com/Ayushbatwada/UrlShortner_BE#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.3",
+    "nodemon": "^3.1.4",
+    "ua-parser-js": "^1.0.38"
+  }
+}
